@@ -1,0 +1,7 @@
+version: '2'
+services:
+  sgcb-postgresql:
+    extends:
+      file: postgresql.yml
+      service: sgcb-postgresql
+    container_name: sgcb-postgresql

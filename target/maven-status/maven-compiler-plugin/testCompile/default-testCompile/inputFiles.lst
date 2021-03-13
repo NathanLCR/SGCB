@@ -1,7 +1,8 @@
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/util/TestUtil.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/util/IntTestComum.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/builder/TransacaoBuilder.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/SistemaDeGestaoDeContasBancariasApplicationTests.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/builder/PessoaBuilder.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/web/rest/ContaRecursoIT.java
-/home/nathan/Área de Trabalho/srs_codigo_fonte/back-end/src/test/java/com/unifacisa/sgcb/builder/ContaBuilder.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/builder/PessoaBuilder.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/builder/TransacaoBuilder.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/SistemaDeGestaoDeContasBancariasApplicationTests.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/util/TestUtil.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/builder/ContaBuilder.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/web/rest/ContaRecursoIT.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/util/IntTestComum.java
+/home/nathan/Área de Trabalho/sgcb/src/test/java/com/unifacisa/sgcb/web/rest/TransacaoRecursoIT.java
