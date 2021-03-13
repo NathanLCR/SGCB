@@ -1,0 +1,8 @@
+com/unifacisa/sgcb/util/IntTestComum.class
+com/unifacisa/sgcb/builder/TransacaoBuilder.class
+com/unifacisa/sgcb/web/rest/ContaRecursoIT.class
+com/unifacisa/sgcb/builder/ContaBuilder.class
+com/unifacisa/sgcb/SistemaDeGestaoDeContasBancariasApplicationTests.class
+com/unifacisa/sgcb/util/TestUtil.class
+com/unifacisa/sgcb/builder/PessoaBuilder.class
+com/unifacisa/sgcb/util/TestUtil$ZonedDateTimeMatcher.class

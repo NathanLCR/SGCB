@@ -1,0 +1,83 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+    <changeSet  author="nathan"  id="tabela_pessoa">
+        <createTable tableName="pessoa" remarks="">
+            <column  name="id"  type="number" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="nome"  type="varchar(120)">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="cpf"  type="varchar(11)">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="data_nascimento"  type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey tableName="pessoa" columnNames="id" constraintName="pk_pessoa_id"/>
+    </changeSet>
+
+    <changeSet  author="nathan"  id="tabela_conta">
+        <createTable tableName="conta" remarks="">
+            <column  name="id"  type="number" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="id_pessoa"  type="number">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="saldo"  type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="limite_saque_diario"  type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="flag_ativo"  type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_conta" type="number">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="data_criacao"  type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey tableName="conta" columnNames="id" constraintName="pk_conta_id"/>
+        <addForeignKeyConstraint baseTableName="conta" baseColumnNames="id_pessoa" constraintName="fk_conta_pessoa" referencedTableName="pessoa"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet  author="nathan"  id="tabela_transacao">
+        <createTable tableName="transacao" remarks="">
+            <column  name="id"  type="number" remarks="">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="id_conta"  type="number">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="valor"  type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column  name="data_transacao"  type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey tableName="transacao" columnNames="id" constraintName="pk_transacao_id"/>
+        <addForeignKeyConstraint baseTableName="transacao" baseColumnNames="id_conta" constraintName="fk_transacao_conta" referencedTableName="conta"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet  author="nathan"  id="create_sequels">
+        <createSequence sequenceName="sq_pessoa" incrementBy="1" cycle="false" startValue="1" cacheSize="20"/>
+        <createSequence sequenceName="sq_conta" incrementBy="1" cycle="false" startValue="1" cacheSize="20"/>
+        <createSequence sequenceName="sq_transacao" incrementBy="1" cycle="false" startValue="1" cacheSize="20"/>
+    </changeSet>
+</databaseChangeLog>
